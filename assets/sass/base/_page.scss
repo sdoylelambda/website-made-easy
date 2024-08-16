@@ -12,6 +12,10 @@
 		}
 
 	// MSIE: Prevents scrollbar from overlapping content.
+	// May need to change to:
+	// body {
+	// 	overflow: auto;
+	// }
 		body {
 			-ms-overflow-style: scrollbar;
 		}
