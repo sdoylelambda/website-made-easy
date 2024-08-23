@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>standard-contract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .content label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .content input[type="text"], .content input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #57a6e7;
+            border-radius: 4px;
+        }
+        .content input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        #e-sign {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            padding: 16px;
+            max-width: 500px;
+            border: 1px solid #04b0e5;
+            border-radius: 4px;
+            height: 50px;
+            background-color: rgb(166, 228, 250);
+        }
+        .footer input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .footer input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo"><strong>website-made-easy.com</strong></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>`
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../about.html">About</a></li>
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../packages.html">Packages</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="../started.html" class="button primary fit">Get Started</a></li>
+							<li><a href="../login.html" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+    <div class="header">
+        <h1>Website Made Easy</h1>
+        <p><a href="https://website-made-easy.com">website-made-easy.com</a></p>
+    </div>
+
+    <div class="content">
+        <form action="#" method="post" netlify>
+            <label for="client-name">Client Name:</label>
+            <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
+
+            <label for="client-url">Client's URL:</label>
+            <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
+
+            <label for="url-availability">
+                <input type="checkbox" id="url-availability" name="url-availability">
+                URL Availability Confirmed
+            </label>
+
+            <label for="package-name">Package Name:</label>
+            <input type="text" id="package-name" name="package-name" value="Standard" readonly>
+
+            <label for="package-price">Package Price ($):</label>
+            <input type="text" id="package-price" name="package-price" value="800" readonly>
+
+            <label for="num-pages">Number of Pages:</label>
+            <input type="text" id="num-pages" name="num-pages" value="5" readonly>
+
+            <label for="galleries">Galleries (Max 9 Pictures):</label>
+            <input type="text" id="galleries" name="galleries" value="1" readonly>
+
+            <label for="forms">Number of Forms:</label>
+            <input type="text" id="forms" name="forms" value="0" readonly>
+
+            <label for="e-sign">e-Sign:</label>
+            <input type="text" id="e-sign" name="e-sign" required>
+                    <p>Today's Date: <span id="current-date"></span></p>
+            
+            <label for="attachment">Add Attachment:</label>
+        <input type="file" id="attachment" name="attachment">
+            <br><br>
+            <input type="submit" value="e-Sign" >
+            <br><br><br>
+            <ul class="actions">
+                <li><a href="https://buy.stripe.com/7sI9CEepufk79B6cMN" class="button next scrolly">Pay</a></li>
+            </ul>
+        </form>
+    </div>
+    
+    <script>
+        // Set current date
+        document.getElementById("current-date").textContent = new Date().toLocaleDateString();
+    </script>
+    </div>
+</section>
+</body>
+</html>

@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Made Easy - Agreement</title>
-    <!-- Include Google Fonts -->
+    <title>basic-contract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <style>
         body {
@@ -28,7 +29,7 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #57a6e7;
             border-radius: 4px;
         }
         .content input[type="checkbox"] {
@@ -57,8 +58,41 @@
             background-color: #45a049;
         }
     </style>
-</head>
-<body>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo"><strong>website-made-easy.com</strong></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>`
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../about.html">About</a></li>
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../packages.html">Packages</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="../started.html" class="button primary fit">Get Started</a></li>
+							<li><a href="../login.html" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
     <div class="header">
         <h1>Website Made Easy</h1>
         <p><a href="https://website-made-easy.com">website-made-easy.com</a></p>
@@ -81,31 +115,37 @@
             <input type="text" id="package-name" name="package-name" value="Basic" readonly>
 
             <label for="package-price">Package Price ($):</label>
-            <input type="number" id="package-price" name="package-price" value="500" readonly>
+            <input type="text" id="package-price" name="package-price" value="500" readonly>
 
             <label for="num-pages">Number of Pages:</label>
-            <input type="number" id="num-pages" name="num-pages" value="3" readonly>
+            <input type="text" id="num-pages" name="num-pages" value="3" readonly>
 
             <label for="galleries">Galleries (Max 9 Pictures):</label>
-            <input type="number" id="galleries" name="galleries" value="1" readonly>
+            <input type="text" id="galleries" name="galleries" value="1" readonly>
 
             <label for="forms">Number of Forms:</label>
-            <input type="number" id="forms" name="forms" value="0" readonly>
+            <input type="text" id="forms" name="forms" value="0" readonly>
 
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
-            <br>        <p>Today's Date: <span id="current-date"></span></p>
-            <br>
-            <input type="submit" value="e-Sign">
+                    <p>Today's Date: <span id="current-date"></span></p>
+            
+            <label for="attachment">Add Attachment:</label>
+        <input type="file" id="attachment" name="attachment">
             <br><br>
+            <input type="submit" value="e-Sign" >
+            <br><br><br>
+            <ul class="actions">
+                <li><a href="https://buy.stripe.com/9AQ0241CI5Jx28EaEE" class="button next scrolly">Pay</a></li>
+            </ul>
         </form>
     </div>
-    <ul class="actions">
-        <li><a href="https://buy.stripe.com/9AQ0241CI5Jx28EaEE" class="button next scrolly">Buy Now!</a></li>
-    </ul>
+    
     <script>
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
     </script>
+    </div>
+</section>
 </body>
 </html>
