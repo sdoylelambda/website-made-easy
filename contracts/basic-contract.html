@@ -112,12 +112,10 @@
             <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
 
             <label for="url-availability" style="display: inline-block; position: relative; z-index: 9999;">
-                <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;">
+                <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
                 <span>URL Availability Confirmed</span>
             </label>
             
-            
-
             <label for="package-name">Package Name:</label>
             <input type="text" id="package-name" name="package-name" value="Basic" readonly>
 
@@ -125,31 +123,36 @@
             <input type="text" id="package-price" name="package-price" value="500" readonly>
 
             <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
-                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;">
-                <span>I understand and agree to pay $50 per year for domain, hosting, etc.</span>
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span>I understand and agree to pay $50 per year for domain, hosting, support, etc. due 11 months from today</span>
             </label>
 
             <label for="num-pages">Number of Pages:</label>
             <input type="text" id="num-pages" name="num-pages" value="3" readonly>
 
             <label for="galleries">Galleries (Max 9 Pictures):</label>
-            <input type="text" id="galleries" name="galleries" value="1" readonly>
+            <input type="text" id="galleries" name="galleries" value="0" readonly>
 
             <label for="forms">Number of Forms:</label>
-            <input type="text" id="forms" name="forms" value="0" readonly>
+            <input type="text" id="forms" name="forms" value="1" readonly>
+
+            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span>I understand that 100 form submissions per month are free. Additional charges apply after.</span>
+            </label>
 
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
                     <p>Today's Date: <span id="current-date"></span></p>
             
-            <label for="attachment">Add Attachment (If Ready):</label>
-            <input type="file" id="attachment" name="attachment">
-            <br><br>
+            <!-- <label for="attachment">Add Attachment (If Ready):</label>
+            <input type="file" id="attachment" name="attachment"> -->
+           
             
-            <input type="submit" value="e-Sign" >
-            <br><br><br>
+            <input type="submit" value="STEP 1 - e-Sign" >
+            <br><br>
             <ul class="actions">
-                <li><a href="https://buy.stripe.com/9AQ0241CI5Jx28EaEE" class="button next scrolly">Pay</a></li>
+                <li><a href="https://buy.stripe.com/9AQ0241CI5Jx28EaEE" class="button next scrolly">STEP 2 - Pay</a></li>
             </ul>
         </form>
     </div>
