@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>basic-contract</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
@@ -34,10 +34,11 @@
         }
         .content input[type="checkbox"] {
             margin-right: 10px;
+            z-index: 9999;
         }
         #e-sign {
             font-family: 'Great Vibes', cursive;
-            font-size: 48px;
+            font-size: 24px;
             padding: 16px;
             max-width: 500px;
             border: 1px solid #04b0e5;
@@ -71,7 +72,7 @@
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
-					</header>`
+					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
@@ -93,29 +94,40 @@
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
-    <div class="header">
-        <h1>Website Made Easy</h1>
-        <p><a href="https://website-made-easy.com">website-made-easy.com</a></p>
-    </div>
-
+                                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                                        <h1>Website Made Easy</h1>
+                                        <p><a href="https://website-made-easy.com">website-made-easy.com</a></p>
+                                    </div>
+                                    
+    <br>
     <div class="content">
         <form action="#" method="post" netlify>
+            <label for="client-name">Company Name:</label>
+            <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
+
             <label for="client-name">Client Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
 
             <label for="client-url">Client's URL:</label>
             <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
 
-            <label for="url-availability">
-                <input type="checkbox" id="url-availability" name="url-availability" style="background-color: red;">
-                URL Availability Confirmed
+            <label for="url-availability" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;">
+                <span>URL Availability Confirmed</span>
             </label>
+            
+            
 
             <label for="package-name">Package Name:</label>
             <input type="text" id="package-name" name="package-name" value="Basic" readonly>
 
             <label for="package-price">Package Price ($):</label>
             <input type="text" id="package-price" name="package-price" value="500" readonly>
+
+            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;">
+                <span>I understand and agree to pay $50 per year for domain, hosting, etc.</span>
+            </label>
 
             <label for="num-pages">Number of Pages:</label>
             <input type="text" id="num-pages" name="num-pages" value="3" readonly>
@@ -130,7 +142,7 @@
             <input type="text" id="e-sign" name="e-sign" required>
                     <p>Today's Date: <span id="current-date"></span></p>
             
-            <label for="attachment">Add Attachment:</label>
+            <label for="attachment">Add Attachment (If Ready):</label>
             <input type="file" id="attachment" name="attachment">
             <br><br>
             
@@ -142,6 +154,26 @@
         </form>
     </div>
     
+    <!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+            window.embeddedChatbotConfig = {
+				chatbotId: "19GOpWTjaSIgkGwrmHat1",
+				domain: "www.chatbase.co"
+				}
+				</script>
+				<script
+				src="https://www.chatbase.co/embed.min.js"
+				chatbotId="19GOpWTjaSIgkGwrmHat1"
+				domain="www.chatbase.co"
+				defer>
+				</script>
     <script>
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
