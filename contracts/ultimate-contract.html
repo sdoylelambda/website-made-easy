@@ -107,15 +107,20 @@
             <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
 
             <label for="url-availability">
-                <input type="checkbox" id="url-availability" name="url-availability">
+                <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
                 URL Availability Confirmed
             </label>
 
             <label for="package-name">Package Name:</label>
-            <input type="text" id="package-name" name="package-name" value="ultimate" readonly>
+            <input type="text" id="package-name" name="package-name" value="Ultimate" readonly>
 
             <label for="package-price">Package Price ($):</label>
             <input type="text" id="package-price" name="package-price" value="1800" readonly>
+
+            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span>I understand and agree to pay $80 per year for domain, hosting, support, etc.</span>
+            </label>
 
             <label for="num-pages">Number of Pages:</label>
             <input type="text" id="num-pages" name="num-pages" value="20" readonly>
@@ -126,13 +131,23 @@
             <label for="forms">Number of Forms:</label>
             <input type="text" id="forms" name="forms" value="2" readonly>
 
+            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span>I understand that 100 form submissions per month are free. Additional charges apply after 100</span>
+            </label>
+
+            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span>I understand that to support multiple users per second additional charges and setup will be needed.</span>
+            </label>
+
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
                     <p>Today's Date: <span id="current-date"></span></p>
             
-            <label for="attachment">Add Attachment:</label>
+            <!-- <label for="attachment">Add Attachment:</label>
         <input type="file" id="attachment" name="attachment">
-            <br><br>
+            <br><br> -->
             <input type="submit" value="e-Sign" >
             <br><br><br>
             <ul class="actions">
