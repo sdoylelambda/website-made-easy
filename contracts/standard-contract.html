@@ -99,7 +99,7 @@
     </div>
 
     <div class="content">
-        <form action="#" method="post" netlify>
+        <form id="paymentForm" method="post" netlify>
             <label for="client-name">Company Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Company Name" required>
 
@@ -150,16 +150,53 @@
         <input type="file" id="attachment" name="attachment">
             <br><br> -->
             <input type="submit" value="e-Sign" >
-            <br><br><br>
-            <ul class="actions">
-                <li><a href="https://buy.stripe.com/7sI9CEepufk79B6cMN" class="button next scrolly">Pay</a></li>
-            </ul>
+            <br><br>           
         </form>
+        <!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<!-- <ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul> -->
+							<ul class="copyright">
+								<li>&copy; Website Made Easy</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
     </div>
     
     <script>
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
+    </script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Collect form data
+            const formData = new FormData(this);
+    
+            try {
+                // Send form data to Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    body: formData,
+                });
+    
+                if (response.ok) {
+                    // Redirect to Stripe after successful submission
+                    window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+                } else {
+                    alert('There was an error submitting the form.');
+                }
+            } catch (error) {
+                alert('There was an error: ' + error.message);
+            }
+        });
     </script>
     </div>
 </section>

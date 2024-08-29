@@ -101,7 +101,7 @@
                                     
     <br>
     <div class="content">
-        <form action="#" method="post" netlify>
+        <form id="paymentForm" method="post" netlify>
             <label for="client-name">Company Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Company Name" required>
 
@@ -138,11 +138,6 @@
 
             <label for="forms">Number of Forms:</label>
             <input type="text" id="forms" name="forms" value="0" readonly>
-<!-- 
-            <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
-                <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
-                <span>I understand that 100 form submissions per month are free. Additional charges apply after.</span>
-            </label> -->
 
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
@@ -150,14 +145,26 @@
             
             <!-- <label for="attachment">Add Attachment (If Ready):</label>
             <input type="file" id="attachment" name="attachment"> -->
-           
-            
-            <input type="submit" value="STEP 1 - e-Sign" >
-            <br><br>
-            <ul class="actions">
-                <li><a href="https://buy.stripe.com/9AQ0241CI5Jx28EaEE" class="button next scrolly">STEP 2 - Pay</a></li>
-            </ul>
+                      
+            <input type="submit" value="e-Sign" >
+            <br><br>          
         </form>
+
+        <!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<!-- <ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul> -->
+							<ul class="copyright">
+								<li>&copy; Website Made Easy</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
     </div>
     
     <!-- Scripts -->
@@ -183,6 +190,31 @@
     <script>
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
+    </script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Collect form data
+            const formData = new FormData(this);
+    
+            try {
+                // Send form data to Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    body: formData,
+                });
+    
+                if (response.ok) {
+                    // Redirect to Stripe after successful submission
+                    window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+                } else {
+                    alert('There was an error submitting the form.');
+                }
+            } catch (error) {
+                alert('There was an error: ' + error.message);
+            }
+        });
     </script>
     </div>
 </section>
