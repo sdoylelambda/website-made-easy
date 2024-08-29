@@ -166,7 +166,7 @@
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
     </script>
-    <script>
+    <!-- <script>
         function handleSubmit() {
             console.log('handleSubmit')
             // Place any other logic here
@@ -174,7 +174,7 @@
             // Once complete, redirect to Google
             window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
         }
-    </script>
+    </script> -->
     <script>
         document.getElementById('paymentForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
@@ -189,8 +189,10 @@
             })
             .then(response => {
                 if (response.ok) {
-                    // If successful, redirect to Stripe
-                    window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+                    // If successful, use a short delay before redirecting
+                    setTimeout(() => {
+                        window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+                    }, 1000); // 1-second delay before redirect
                 } else {
                     alert('There was an error submitting the form.');
                 }
