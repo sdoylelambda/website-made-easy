@@ -99,10 +99,16 @@
     </div>
 
     <div class="content">
-        <form action="#" method="post" netlify>
-            <label for="client-name">Client Name:</label>
-            <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
+        <form id="paymentForm" method="post" netlify>
+            <label for="client-name">Company Name:</label>
+            <input type="text" id="client-name" name="client-name" placeholder="Your Company Name" required>
 
+            <label for="client-name">Client's Name:</label>
+            <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
+            
+            <label for="client-email">Client's Email address:</label>
+            <input type="text" id="client-email" name="client-email" placeholder="Your Email" required>
+          
             <label for="client-url">Client's URL:</label>
             <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
 
@@ -148,17 +154,51 @@
             <!-- <label for="attachment">Add Attachment:</label>
         <input type="file" id="attachment" name="attachment">
             <br><br> -->
-            <input type="submit" value="e-Sign" >
+            <input type="submit" value="e-Sign">
             <br><br><br>
-            <ul class="actions">
+            <!-- <ul class="actions">
                 <li><a href="https://buy.stripe.com/5kA4ik6X25JxbJe8wz" class="button next scrolly">Pay</a></li>
-            </ul>
+            </ul> -->
         </form>
     </div>
     
     <script>
         // Set current date
         document.getElementById("current-date").textContent = new Date().toLocaleDateString();
+    </script>
+    <script>
+        function handleSubmit() {
+            console.log('handleSubmit')
+            // Place any other logic here
+            setTimeout(() => { console.log('2 second passed'); }, 2000);
+            // Once complete, redirect to Google
+            window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+        }
+    </script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Collect form data
+            const formData = new FormData(this);
+    
+            // Send form data to Netlify
+            fetch('/', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    // If successful, redirect to Stripe
+                    window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
+                } else {
+                    alert('There was an error submitting the form.');
+                }
+            })
+            .catch(error => {
+                alert('There was an error: ' + error.message);
+            });
+        });
     </script>
     </div>
 </section>
