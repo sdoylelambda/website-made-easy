@@ -176,30 +176,28 @@
         }
     </script> -->
     <script>
-        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+        document.getElementById('paymentForm').addEventListener('submit', async function(event) {
             event.preventDefault(); // Prevent default form submission
     
             // Collect form data
             const formData = new FormData(this);
     
-            // Send form data to Netlify
-            fetch('/', {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => {
+            try {
+                // Send form data to Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    body: formData,
+                });
+    
                 if (response.ok) {
-                    // If successful, use a short delay before redirecting
-                    setTimeout(() => {
-                        window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
-                    }, 4000); // 1-second delay before redirect
+                    // Redirect to Stripe after successful submission
+                    window.location.href = 'https://buy.stripe.com/5kA4ik6X25JxbJe8wz';
                 } else {
                     alert('There was an error submitting the form.');
                 }
-            })
-            .catch(error => {
+            } catch (error) {
                 alert('There was an error: ' + error.message);
-            });
+            }
         });
     </script>
     </div>
