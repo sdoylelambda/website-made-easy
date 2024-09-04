@@ -102,46 +102,84 @@
     <br>
     <div class="content">
         <form id="paymentForm" method="post" netlify>
-            <label for="client-name">Company Name:</label>
+            <label for="client-name" style="white-space: pre-wrap; text-transform: none;">Company Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Company Name" required>
 
-            <label for="client-name">Client's Name:</label>
+            <label for="client-name"style="white-space: pre-wrap; text-transform: none;">Client's Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
             
-            <label for="client-email">Client's Email address:</label>
+            <label for="client-email" style="white-space: pre-wrap; text-transform: none;">Client's Email Address:</label>
             <input type="text" id="client-email" name="client-email" placeholder="Your Email" required>
+
+            <label for="client-phone" style="white-space: pre-wrap; text-transform: none;">Client's Phone Number:</label>
+            <input type="text" id="client-phone" name="client-phone" placeholder="Your Phone Number" required>
           
-            <label for="client-url">Client's URL:</label>
+            <label for="client-url" style="white-space: pre-wrap; text-transform: none;">Company's New URL:</label>
             <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
 
             <label for="url-availability" style="display: inline-block; position: relative; z-index: 9999;">
                 <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
-                <span>URL Availability Confirmed</span>
+                <span style="white-space: pre-wrap; text-transform: none;">URL Availability Confirmed</span>
             </label>
             
-            <label for="package-name">Package Name:</label>
+            <label for="package-name" style="white-space: pre-wrap; text-transform: none;">Package Name:</label>
             <input type="text" id="package-name" name="package-name" value="Basic" readonly>
 
-            <label for="package-price">Package Price ($):</label>
+            <label for="package-price" style="white-space: pre-wrap; text-transform: none;">Package Price ($):</label>
             <input type="text" id="package-price" name="package-price" value="500" readonly>
 
             <label for="yearly-price" style="display: inline-block; position: relative; z-index: 9999;">
                 <input type="checkbox" id="yearly-price" name="yearly-price" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
-                <span>I understand and agree to pay $50 per year for domain, hosting, support, etc. due 11 months from today</span>
-            </label>
+                <span style="white-space: pre-wrap; text-transform: none;">I agree to pay $50 annually for domain registration, hosting, and maintenance, with the first payment due 12 months from today to ensure the continued operation of my website.</span>
+            </label>                     
 
-            <label for="num-pages">Number of Pages:</label>
+            <label for="num-pages" style="white-space: pre-wrap; text-transform: none;">Number of Pages:</label>
             <input type="text" id="num-pages" name="num-pages" value="3" readonly>
 
-            <label for="galleries">Galleries (Max 9 Pictures):</label>
+            <label for="galleries" style="white-space: pre-wrap; text-transform: none;">Galleries (Max 9 Pictures):</label>
             <input type="text" id="galleries" name="galleries" value="0" readonly>
 
-            <label for="forms">Number of Forms:</label>
+            <label for="forms" style="white-space: pre-wrap; text-transform: none;">Number of Forms:</label>
             <input type="text" id="forms" name="forms" value="0" readonly>
+
+            <label for="template" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="template" name="template" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I understand this is a template so I have limited input on the design of the website.</span>
+            </label>   
+            <br>
+            <label for="page" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="page" name="page" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I understand that a standard website page typically includes one image, a title, and a paragraph of text.</span>
+            </label>   
+            <br>
+            <label for="timeframe" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="timeframe" name="timeframe" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I understand that the development of my website will take up to 2 weeks, beginning once Website-Made-Easy has received all necessary media (text, images, etc.) for the project’s completion.</span>
+            </label>   
+            <br>
+            <label for="deposit" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="deposit" name="deposit" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I agree to pay $250 today as an initial deposit for half of the website development. The remaining $250 will be due upon the website's launch.</span>
+            </label>
+            <br>
+            <label for="revisions" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="revisions" name="revisions" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I understand that the package includes 2 rounds of revisions. Any additional revisions beyond this will incur extra charges.</span>
+            </label>
+            <br>
+            <label for="3rdparties" style="display: inline-block; position: relative; z-index: 9999;">
+                <input type="checkbox" id="3rdparties" name="3rdparties" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
+                <span style="white-space: pre-wrap; text-transform: none;">I understand that Website-Made-Easy is not liable for any data loss, downtime, or performance issues caused by third-party services (e.g., hosting providers).</span>
+            </label>
+            <br><br>
+
+            <h3>Privacy Policy:</h3>
+            <p>"Website-Made-Easy will not share or disclose any personal information or project details with third parties, ensuring confidentiality and adherence to privacy standards."</p>
+
 
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
-                    <p>Today's Date: <span id="current-date"></span></p>
+                <p>Today's Date: <span id="current-date"></span></p>
             
             <!-- <label for="attachment">Add Attachment (If Ready):</label>
             <input type="file" id="attachment" name="attachment"> -->
