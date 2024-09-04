@@ -12,3 +12,4 @@ Website Made Easy
 [x] update pricing based on spread sheet
 [x] contract form with e-sign
 [] custom package form
+[] emoticon
