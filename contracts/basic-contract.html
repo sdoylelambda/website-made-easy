@@ -103,8 +103,8 @@
     <br>
     <div class="content">
         <form id="paymentForm" method="post" netlify>
-            <label for="client-name" style="white-space: pre-wrap; text-transform: none;">Company Name:</label>
-            <input type="text" id="client-name" name="client-name" placeholder="Your Company Name" required>
+            <label for="company-name" style="white-space: pre-wrap; text-transform: none;">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Your Company Name" required>
 
             <label for="client-name"style="white-space: pre-wrap; text-transform: none;">Client's Name:</label>
             <input type="text" id="client-name" name="client-name" placeholder="Your Name" required>
@@ -115,13 +115,16 @@
             <label for="client-phone" style="white-space: pre-wrap; text-transform: none;">Client's Phone Number:</label>
             <input type="text" id="client-phone" name="client-phone" placeholder="Your Phone Number" required>
           
-            <label for="client-url" style="white-space: pre-wrap; text-transform: none;">Company's New URL:</label>
-            <input type="text" id="client-url" name="client-url" placeholder="your-new-website.com" required>
+            <label for="company-url" style="white-space: pre-wrap; text-transform: none;">Company's New URL:</label>
+            <input type="text" id="company-url" name="company-url" placeholder="your-new-website.com" required>
 
             <label for="url-availability" style="display: inline-block; position: relative; z-index: 9999;">
                 <input type="checkbox" id="url-availability" name="url-availability" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
                 <span style="white-space: pre-wrap; text-transform: none;">URL Availability Confirmed</span>
             </label>
+
+            <label for="sales-name"style="white-space: pre-wrap; text-transform: none;">Sales Agent Name:</label>
+            <input type="text" id="sales-name" name="sales-name" placeholder="Sales Associates Name">
             
             <label for="package-name" style="white-space: pre-wrap; text-transform: none;">Package Name:</label>
             <input type="text" id="package-name" name="package-name" value="Basic" readonly>
@@ -142,6 +145,10 @@
 
             <label for="forms" style="white-space: pre-wrap; text-transform: none;">Number of Forms:</label>
             <input type="text" id="forms" name="forms" value="0" readonly>
+
+            <label for="notes" style="white-space: pre-wrap; text-transform: none;">Notes:</label>
+            <input type="text" id="notes" name="notes" placeholder="Additional Information">
+            
 
             <label for="template" style="display: inline-block; position: relative; z-index: 9999;">
                 <input type="checkbox" id="template" name="template" style="width: 20px; height: 20px; border: 2px solid red; display: inline-block; vertical-align: middle; position: relative; z-index: 9999; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;" required>
@@ -176,7 +183,6 @@
 
             <h3>Privacy Policy:</h3>
             <p>"Website-Made-Easy will not share or disclose any personal information or project details with third parties, ensuring confidentiality and adherence to privacy standards."</p>
-
 
             <label for="e-sign">e-Sign:</label>
             <input type="text" id="e-sign" name="e-sign" required>
