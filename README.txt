@@ -17,9 +17,9 @@ Website Made Easy
         - specific for each package? 
         - make form that emails info? or pdf google?
 
-[] emails for clients
-    [] package description - process - what to expect
-    [] payment
+[x] emails for clients
+    [x] package description - process - what to expect
+    [x] payment
 
 Updates
 
