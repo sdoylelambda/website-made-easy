@@ -69,6 +69,208 @@
 								</ul>
 								<br>
 							</div>
+
+							<h2>Example Pages:</h2>
+
+							<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Image Carousel</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06f}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0}
+    .carousel{width:min(920px,94vw); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:12px; position:relative; overflow:hidden}
+    .slides{display:flex; transition:transform 420ms cubic-bezier(.2,.9,.3,1); will-change:transform}
+    .slide{min-width:100%; user-select:none; display:flex; align-items:center; justify-content:center; position:relative}
+    .slide img{max-width:100%; max-height:62vh; border-radius:8px; display:block}
+
+    /* arrows */
+    .arrow{position:absolute; top:50%; transform:translateY(-50%); width:46px; height:46px; border-radius:999px; background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; cursor:pointer}
+    .arrow:active{transform:translateY(-50%) scale(.98)}
+    .arrow.left{left:12px}
+    .arrow.right{right:12px}
+    .arrow svg{width:20px;height:20px; color:#fff}
+
+    /* indicators */
+    .indicators{display:flex; gap:8px; position:absolute; left:50%; transform:translateX(-50%); bottom:10px}
+    .indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;border:1px solid rgba(255,255,255,0.06)}
+    .indicator[aria-current="true"]{width:28px;border-radius:999px;background:var(--accent)}
+
+    /* caption */
+    .caption{position:absolute; left:16px; bottom:16px; font-size:14px; color:#e6eef8; background:rgba(3,7,18,0.45); padding:8px 12px; border-radius:8px}
+
+    /* responsive tweaks */
+    @media (max-width:520px){.arrow{width:40px;height:40px}.caption{font-size:12px}}
+  </style>
+</head>
+<body>
+  <main class="carousel" aria-roledescription="carousel" aria-label="Gallery">
+    <div class="slides" id="slides">
+      
+	   <figure class="slide">
+		<a href="https://www.appraiserbff.xyz/">
+        <img  src="images/appraisePage.png" alt="Realtor/Appraiser Page"/>
+        <figcaption class="caption">Realtor/Appraiser Website</figcaption>
+      </a>  
+	  </figure>
+	  
+	  <figure class="slide">
+		<a href="https://sdoylelambda.github.io/usaforeverflooring/">
+        <img  src="images/usaForeverFlooringDesktop.png" alt="Flooring Page"/>
+        <figcaption class="caption">Flooring Website</figcaption>
+      </a>  
+	  </figure>
+
+      <figure class="slide">
+		<a href="https://sdoyledev.netlify.app/">
+        <img  src="images/myPortfolioPage.png" alt="Portfolio Website Page"/>
+        <figcaption class="caption">Portfolio Website</figcaption>
+      </a>  
+	  </figure>
+
+	  <figure class="slide">
+		<a href="https://sdoylelambda.github.io/PaintingMaster/">
+        <img  src="images/paintingPage.png" alt="Painter Page"/>
+        <figcaption class="caption">Painter Website</figcaption>
+      </a>  
+	  </figure>
+
+	  <figure class="slide">
+		<a href="https://sdoylelambda.github.io/Steer-In-Burgers/">
+        <img  src="images/burgersPage.png" alt="Restaurant Page"/>
+        <figcaption class="caption">Restaurant Website</figcaption>
+      </a>  
+	  </figure>
+	  
+      <figure class="slide">
+		<a href="https://wieldingthesword.info/">
+        <img  src="images/wieldingPage.png" alt="Author Page"/>
+        <figcaption class="caption">Author Website</figcaption>
+      </a>  
+	  </figure>
+	  
+	  <figure class="slide">
+		<a href="https://cymatics-frequncy-analyzer.netlify.app/">
+        <img  src="images/cymaticsPage.png" alt="Cymatics Frequency Detector Page"/>
+        <figcaption class="caption">Science and Research Website</figcaption>
+      </a>  
+	  </figure>
+
+	  
+
+
+    </div>
+
+    <button class="arrow left" id="prev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6 L9 12 L15 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <button class="arrow right" id="next" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6 L15 12 L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="indicators" id="indicators" role="tablist" aria-label="Slide indicators"></div>
+  </main>
+
+  
+
+
+
+							<!-- <div class="gallery style2 medium lightbox onscroll-fade-in">
+          <article>
+            <a href="images/gallery/fulls/01.jpg" class="image">
+              <img
+                src="images/bike.jpeg"
+                style="max-width: 800px; max-height: 175px; object-fit: cover"
+                alt=""
+              />
+            </a>
+            <div class="caption">
+              <h3>GSXR</h3>
+              <p>I am a motorbike enthusiast.</p>
+              <ul class="actions fixed">
+                <li><span class="button small">Details</span></li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="images/gallery/fulls/02.jpg" class="image">
+              <img
+                src="images/sunset.jpeg"
+                style="max-width: 800px; max-height: 175px; object-fit: cover"
+                alt=""
+              />
+            </a>
+            <div class="caption">
+              <h3>Sunset</h3>
+              <p>Refreshing by the ocean.</p>
+              <ul class="actions fixed">
+                <li><span class="button small">Details</span></li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="images/gallery/fulls/03.jpg" class="image">
+              <img
+                src="images/beach-city.jpg"
+                style="max-width: 800px; max-height: 175px; object-fit: cover"
+                alt=""
+              />
+            </a>
+            <div class="caption">
+              <h3>Best place for work and play</h3>
+              <p>Beach Life.</p>
+              <ul class="actions fixed">
+                <li><span class="button small">Details</span></li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="images/gallery/fulls/04.jpg" class="image">
+              <img
+                src="images/sunrise2.jpg"
+                style="max-width: 800px; max-height: 175px; object-fit: cover"
+                alt=""
+              />
+            </a>
+            <div class="caption">
+              <h3>From D.C area</h3>
+              <p>Moved to Florida</p>
+              <ul class="actions fixed">
+                <li><span class="button small">Details</span></li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a
+              href="images/gallery/fulls/05.jpg"
+              style="max-width: 800px; max-height: 175px; object-fit: cover"
+              class="image"
+            >
+              <img
+                src="images/city.jpg"
+                style="max-width: 800px; max-height: 175px; object-fit: cover"
+                alt=""
+              />
+            </a>
+            <div class="caption">
+              <h3>Sales Management</h3>
+              <p>
+                Over a decade of retail, mortgage and small business experience
+              </p>
+              <ul class="actions fixed">
+                <li><span class="button small">Details</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section> -->
+
+
+
 							<h2>Our Website Packages:</h2>
 							<br><br>
 						</div>
@@ -293,7 +495,72 @@
 				chatbotId="19GOpWTjaSIgkGwrmHat1"
 				domain="www.chatbase.co"
 				defer>
-				</script>
+			</script>
+			<script>
+				(function(){
+				const slidesWrap = document.getElementById('slides');
+				const slides = Array.from(slidesWrap.children);
+				const prevBtn = document.getElementById('prev');
+				const nextBtn = document.getElementById('next');
+				const indicatorsWrap = document.getElementById('indicators');
+				let index = 0;
+				const count = slides.length;
+				let isAnimating = false;
+
+				// build indicators
+				slides.forEach((s,i)=>{
+					const btn = document.createElement('button');
+					btn.className = 'indicator';
+					btn.type = 'button';
+					btn.setAttribute('aria-label', `Go to slide ${i+1}`);
+					btn.addEventListener('click', ()=> goTo(i));
+					indicatorsWrap.appendChild(btn);
+				});
+
+				const indicators = Array.from(indicatorsWrap.children);
+
+				function update(){
+					slidesWrap.style.transform = `translateX(${ -index * 100 }%)`;
+					indicators.forEach((it,i)=> it.setAttribute('aria-current', i===index));
+				}
+
+				function prev(){ if(isAnimating) return; index = (index-1+count)%count; update(); }
+				function next(){ if(isAnimating) return; index = (index+1)%count; update(); }
+				function goTo(i){ if(isAnimating) return; index = (i+count)%count; update(); }
+
+				prevBtn.addEventListener('click', prev);
+				nextBtn.addEventListener('click', next);
+
+				// keyboard navigation
+				window.addEventListener('keydown', (e)=>{
+					if(e.key === 'ArrowLeft') prev();
+					if(e.key === 'ArrowRight') next();
+				});
+
+				// touch support (simple swipe)
+				let startX = 0, dx = 0;
+				slidesWrap.addEventListener('touchstart', e=>{ startX = e.touches[0].clientX; dx=0; });
+				slidesWrap.addEventListener('touchmove', e=>{ dx = e.touches[0].clientX - startX; });
+				slidesWrap.addEventListener('touchend', ()=>{ if(Math.abs(dx) > 40){ if(dx < 0) next(); else prev(); } startX=0; dx=0; });
+
+				// optional: autoplay (comment out if you don't want it)
+				let autoplayInterval = 5000; // ms
+				let autoplayId = setInterval(next, autoplayInterval);
+				// pause on hover / focus
+				document.querySelector('.carousel').addEventListener('mouseenter', ()=> clearInterval(autoplayId));
+				document.querySelector('.carousel').addEventListener('mouseleave', ()=> autoplayId = setInterval(next, autoplayInterval));
+
+				// initial state
+				update();
+
+				// simple lazy-loading: ensure images have loading="lazy"
+				slides.forEach(fig=>{
+					const img = fig.querySelector('img');
+					if(img) img.loading = 'lazy';
+				});
+
+				})();
+			</script>
 
 	</body>
 </html>
