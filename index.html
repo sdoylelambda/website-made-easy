@@ -72,108 +72,73 @@
 
 							<h2>Example Pages:</h2>
 
-							<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Image Carousel</title>
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06f}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0}
-    .carousel{width:min(920px,94vw); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:12px; position:relative; overflow:hidden}
-    .slides{display:flex; transition:transform 420ms cubic-bezier(.2,.9,.3,1); will-change:transform}
-    .slide{min-width:100%; user-select:none; display:flex; align-items:center; justify-content:center; position:relative}
-    .slide img{max-width:100%; max-height:62vh; border-radius:8px; display:block}
+							<h2>Example Pages:</h2>
 
-    /* arrows */
-    .arrow{position:absolute; top:50%; transform:translateY(-50%); width:46px; height:46px; border-radius:999px; background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; cursor:pointer}
-    .arrow:active{transform:translateY(-50%) scale(.98)}
-    .arrow.left{left:12px}
-    .arrow.right{right:12px}
-    .arrow svg{width:20px;height:20px; color:#fff}
+<style>
+  :root{--bg:#0f1724;--card:#0b1220;--accent:#06f}
+  *{box-sizing:border-box}
+  .carousel{width:min(920px,94vw); margin-inline:auto; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:12px; position:relative; overflow:hidden}
+  .slides{display:flex; transition:transform 420ms cubic-bezier(.2,.9,.3,1); will-change:transform}
+  .slide{min-width:100%; display:flex; align-items:center; justify-content:center}
+  .slide img{max-width:100%; height:auto; border-radius:8px; display:block}
 
-    /* indicators */
-    .indicators{display:flex; gap:8px; position:absolute; left:50%; transform:translateX(-50%); bottom:10px}
-    .indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;border:1px solid rgba(255,255,255,0.06)}
-    .indicator[aria-current="true"]{width:28px;border-radius:999px;background:var(--accent)}
+  .arrow{position:absolute; top:50%; transform:translateY(-50%); width:46px; height:46px; border-radius:50%; background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; cursor:pointer}
+  .arrow.left{left:12px}
+  .arrow.right{right:12px}
 
-    /* caption */
-    .caption{position:absolute; left:16px; bottom:16px; font-size:14px; color:#e6eef8; background:rgba(3,7,18,0.45); padding:8px 12px; border-radius:8px}
+  .indicators{display:flex; gap:8px; position:absolute; left:50%; transform:translateX(-50%); bottom:10px}
+  .indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer}
+  .indicator[aria-current="true"]{width:28px;border-radius:999px;background:var(--accent)}
 
-    /* responsive tweaks */
-    @media (max-width:520px){.arrow{width:40px;height:40px}.caption{font-size:12px}}
-  
- 	.carousel, .slides, .slide { max-width: 100%; }
+  /* Mobile Fix */
+  @media (max-width:520px){
+    .carousel { width:100%; }
+    .slide img { max-width:100%; height:auto; }
+  }
 
- </style>
-</head>
-<body>
-  <main class="carousel" aria-roledescription="carousel" aria-label="Gallery">
-    <div class="slides" id="slides">
-      
-	   <figure class="slide">
-		<a href="https://www.appraiserbff.xyz/">
-        <img  src="images/appraisePage.png" alt="Realtor/Appraiser Page"/>
+  /* CRITICAL overflow fix */
+  body, html { overflow-x:hidden; }
+</style>
+
+<div class="carousel" aria-roledescription="carousel">
+  <div class="slides" id="slides">
+    
+    <figure class="slide">
+      <a href="https://www.appraiserbff.xyz/">
+        <img src="images/appraisePage.png" alt="Realtor/Appraiser Page"/>
         <figcaption class="caption">Realtor/Appraiser Website</figcaption>
-      </a>  
-	  </figure>
-	  
-	  <figure class="slide">
-		<a href="https://sdoylelambda.github.io/usaforeverflooring/">
-        <img  src="images/usaForeverFlooringDesktop.png" alt="Flooring Page"/>
+      </a>
+    </figure>
+
+    <figure class="slide">
+      <a href="https://sdoylelambda.github.io/usaforeverflooring/">
+        <img src="images/usaForeverFlooringDesktop.png" alt="Flooring Page"/>
         <figcaption class="caption">Flooring Website</figcaption>
-      </a>  
-	  </figure>
+      </a>
+    </figure>
 
-      <figure class="slide">
-		<a href="https://sdoyledev.netlify.app/">
-        <img  src="images/myPortfolioPage.png" alt="Portfolio Website Page"/>
+    <figure class="slide">
+      <a href="https://sdoyledev.netlify.app/">
+        <img src="images/myPortfolioPage.png" alt="Portfolio Website Page"/>
         <figcaption class="caption">Portfolio Website</figcaption>
-      </a>  
-	  </figure>
+      </a>
+    </figure>
 
-	  <figure class="slide">
-		<a href="https://sdoylelambda.github.io/PaintingMaster/">
-        <img  src="images/paintingPage.png" alt="Painter Page"/>
-        <figcaption class="caption">Painter Website</figcaption>
-      </a>  
-	  </figure>
+    <!-- Add your other slides here -->
 
-	  <figure class="slide">
-		<a href="https://sdoylelambda.github.io/Steer-In-Burgers/">
-        <img  src="images/burgersPage.png" alt="Restaurant Page"/>
-        <figcaption class="caption">Restaurant Website</figcaption>
-      </a>  
-	  </figure>
-	  
-      <figure class="slide">
-		<a href="https://wieldingthesword.info/">
-        <img  src="images/wieldingPage.png" alt="Author Page"/>
-        <figcaption class="caption">Author Website</figcaption>
-      </a>  
-	  </figure>
-	  
-	  <figure class="slide">
-		<a href="https://cymatics-frequncy-analyzer.netlify.app/">
-        <img  src="images/cymaticsPage.png" alt="Cymatics Frequency Detector Page"/>
-        <figcaption class="caption">Science and Research Website</figcaption>
-      </a>  
-	  </figure>
+  </div>
 
-    </div>
+  <button class="arrow left" id="prev">
+    <svg viewBox="0 0 24 24"><path d="M15 6 L9 12 L15 18" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-    <button class="arrow left" id="prev" aria-label="Previous slide">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6 L9 12 L15 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
+  <button class="arrow right" id="next">
+    <svg viewBox="0 0 24 24"><path d="M9 6 L15 12 L9 18" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-    <button class="arrow right" id="next" aria-label="Next slide">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6 L15 12 L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
+  <div class="indicators" id="indicators"></div>
+</div>
 
-    <div class="indicators" id="indicators" role="tablist" aria-label="Slide indicators"></div>
-  </main>
 
   
 
