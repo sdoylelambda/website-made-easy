@@ -12,7 +12,7 @@ Website Made Easy
 [x] update pricing based on spread sheet
 [x] contract form with e-sign
 [x] favicon
-[] custom package form
+[x] custom package form
 [] client interview questions - needs analysis 
         - specific for each package? 
         - make form that emails info? or pdf google?
@@ -39,17 +39,11 @@ Docs
     [] in person
     [] email
 
-Ethical Hacking
-[] Create another site for Protection
-    [] Why
-    [] Services
-    [] Costs
-
 Questions
 [] Independent contractor general laws and regulations 
 [] What should pay breakdown be between all parties
 [] How or should I make sites private
-[]
+
 
 
 
