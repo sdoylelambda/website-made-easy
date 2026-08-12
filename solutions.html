@@ -13,6 +13,123 @@
 			opacity: 0;
 		}
 		</style>
+        <style>
+        /* ================================
+        Business Solutions Styling
+        ================================ */
+
+        .business-intro {
+            margin: 2rem 0 3rem;
+        }
+
+        .business-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0 3.5rem;
+        }
+
+        .business-card {
+            position: relative;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.035);
+            border-left: 4px solid #6c6333;
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease,
+                        background 0.25s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.065);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .business-card h4 {
+            margin-bottom: 0.6rem;
+        }
+
+        .business-card p {
+            margin-bottom: 0;
+        }
+
+        .business-section {
+            margin: 3rem 0;
+        }
+
+        .business-section > h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .business-lead {
+            font-size: 1.08rem;
+        }
+
+        .business-highlight {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-highlight h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .business-highlight h4 {
+            margin-bottom: 1rem;
+        }
+
+        .business-cta {
+            margin: 4rem 0 2rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-cta p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .business-cta .actions {
+            justify-content: center;
+        }
+
+        .business-tagline {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media screen and (max-width: 736px) {
+
+            .business-services {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .business-card {
+                padding: 1.25rem;
+            }
+
+            .business-highlight {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .business-cta {
+                padding: 2rem 1.25rem;
+            }
+
+        }
+    </style>
 
 		<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -62,281 +179,352 @@
 
 				<!-- Main -->
 				<div id="main">
-
 					<!-- One -->
-					<section id="one" class="style9">
-                    <div class="inner">
+<section id="one" class="style9">
+    <div class="inner">
 
-                        <h1>Business Solutions</h1>
+        <h1>Business Solutions</h1>
 
-                        <h3>How can we help your business?</h3>
+        <h3>How can we help your business?</h3>
 
-                        <p><strong>Integration:</strong> Connect the tools you already use so information moves between them automatically—saving time, reducing errors, and keeping everything in sync.</p>
+        <div class="business-services">
 
-                        <p><strong>Automation:</strong> Let repetitive work take care of itself. Send invoices, follow up with customers, process forms, update records, and handle everyday tasks automatically.</p>
+            <div class="business-card">
+                <h4>Integration</h4>
+                <p>
+                    <strong>Make your tools work together.</strong>
+                    Connect the software you already use so information moves automatically—
+                    saving time, reducing errors, and keeping everything up to date.
+                </p>
+            </div>
 
-                        <p><strong>AI:</strong> Put AI to work for your business. Find potential customers, improve pricing, answer common questions, analyze information, spot trends, and help you make smarter decisions.</p>
+            <div class="business-card">
+                <h4>Automation</h4>
+                <p>
+                    <strong>Let repetitive work take care of itself.</strong>
+                    Send invoices, follow up with customers, process forms, update records,
+                    and handle everyday tasks automatically.
+                </p>
+            </div>
 
-                        <p><strong>Data &amp; Analytics:</strong> Turn your business information into useful insights. Understand what's working, spot trends and opportunities, and get a clearer picture of your business.</p>
+            <div class="business-card">
+                <h4>AI</h4>
+                <p>
+                    <strong>Put AI to work for your business.</strong>
+                    Find potential customers, improve pricing, answer common questions,
+                    analyze information, spot trends, and make better decisions.
+                </p>
+            </div>
 
-                        <p><strong>CRM Workflows:</strong> Make your customer management system work harder. Automatically follow up with leads, keep customer information organized, and make sure opportunities don't slip through the cracks.</p>
+            <div class="business-card">
+                <h4>Data &amp; Analytics</h4>
+                <p>
+                    <strong>Know what's happening in your business.</strong>
+                    Turn your business information into useful insights so you can understand
+                    what's working and spot opportunities.
+                </p>
+            </div>
 
-                        <br>
+            <div class="business-card">
+                <h4>CRM Workflows</h4>
+                <p>
+                    <strong>Follow up faster. Stay organized. Close more business.</strong>
+                    Automate follow-ups, keep customer information organized, and make sure
+                    opportunities don't slip through the cracks.
+                </p>
+            </div>
 
-                        <header class="major">
-                            <h2>Technology That Works For Your Business</h2>
-                        </header>
+        </div>
 
-                        <p>
-                            Every business has tasks that take too much time, information that's difficult to manage,
-                            and processes that could work better. We create practical technology solutions that save
-                            time, simplify your day-to-day operations, and help you get more from the tools you already use.
-                        </p>
+        <header class="major">
+            <h2>Tech To Make Your Business Easier</h2>
+        </header>
 
-                        <p>
-                            Whether you need to eliminate manual data entry, connect two tools that don't work well
-                            together, automate customer communication, or use AI to make better decisions, we can
-                            design a solution around the way your business actually operates.
-                        </p>
+        <div class="business-intro">
 
-                        <hr>
+            <p class="business-lead">
+                Every business has tasks that take too much time, information that's difficult
+                to manage, and processes that could work better. We create practical technology
+                solutions that save time, simplify your day-to-day operations, and help you get
+                more from the tools you already use.
+            </p>
 
-                        <h2>Integration</h2>
+            <p>
+                Whether you need to eliminate manual data entry, connect two tools that don't
+                work well together, automate customer communication, or use AI to make better
+                decisions, we can design a solution around the way your business actually operates.
+            </p>
 
-                        <p>
-                            <strong>Connect the tools you already use.</strong> Your business shouldn't have to rely
-                            on copying information from one application to another. We can connect websites, CRMs,
-                            databases, forms, scheduling systems, payment platforms, email services, and other
-                            business applications so your information moves where it needs to go.
-                        </p>
+        </div>
 
-                        <p>
-                            Whether you need to connect two simple tools or coordinate information across several
-                            systems, we can help your technology work together and reduce the manual work required
-                            to keep everything up to date.
-                        </p>
+        <hr>
 
-                        <ul>
-                            <li>Connect the tools and software you already use</li>
-                            <li>Keep customer and business information in sync</li>
-                            <li>Connect websites, forms, scheduling, payments, and other systems</li>
-                            <li>Reduce duplicate data entry and manual work</li>
-                            <li>Build custom solutions around the way your business operates</li>
-                        </ul>
+        <div class="business-section">
 
-                        <hr>
+            <h2>Integration</h2>
 
-                        <h2>Automation</h2>
+            <p class="business-lead">
+                <strong>Tired of entering the same information in more than one place?</strong>
+                We connect the tools you already use so information moves where it needs to go
+                automatically. Websites, CRMs, databases, forms, scheduling systems, payment
+                platforms, email services, and other business applications can work together
+                instead of making you do the work twice.
+            </p>
 
-                        <p>
-                            <strong>Let technology handle the repetitive work.</strong> If your team is repeatedly
-                            entering data, sending emails, processing forms, creating reports, updating records,
-                            or moving information between systems, there may be an opportunity to automate it.
-                        </p>
+            <p>
+                Whether you need to connect two simple tools or coordinate information across
+                several systems, we can help your technology work together and reduce the manual
+                work required to keep everything up to date.
+            </p>
 
-                        <p>
-                            We set up processes that work automatically in the background, helping your team spend
-                            less time on repetitive tasks and more time serving customers and growing the business.
-                        </p>
+            <ul>
+                <li>Connect the tools and software you already use</li>
+                <li>Keep customer and business information in sync</li>
+                <li>Connect websites, forms, scheduling, payments, and other systems</li>
+                <li>Reduce duplicate data entry and manual work</li>
+                <li>Build custom solutions around the way your business operates</li>
+            </ul>
 
-                        <ul>
-                            <li>Automated emails, notifications, and follow-ups</li>
-                            <li>Form processing and data validation</li>
-                            <li>Automated data entry and database updates</li>
-                            <li>Document and file processing</li>
-                            <li>Scheduled business workflows and recurring tasks</li>
-                            <li>Custom automation built around your business</li>
-                        </ul>
+        </div>
 
-                        <hr>
+        <hr>
 
-                        <h2>Artificial Intelligence</h2>
+        <div class="business-section">
 
-                        <p>
-                            <strong>Put AI to work for your business.</strong> AI can do much more than power a chatbot.
-                            We can help identify practical ways to use AI to find information, analyze data, assist
-                            employees, improve customer service, automate tasks, and make business information easier to access.
-                        </p>
+            <h2>Automation</h2>
 
-                        <p>
-                            From AI assistants and intelligent search to automated document processing and workflow
-                            assistance, we focus on solutions that provide a real business benefit rather than adding
-                            AI simply because it is the latest technology.
-                        </p>
+            <p class="business-lead">
+                <strong>Stop spending valuable time on work that doesn't need to be done by hand.</strong>
+                If your team is repeatedly entering data, sending emails, processing forms,
+                creating reports, updating records, or moving information between systems,
+                there may be an opportunity to automate it.
+            </p>
 
-                        <ul>
-                            <li>AI assistants and business chatbots</li>
-                            <li>Quickly find answers in your business information</li>
-                            <li>Automate routine customer and employee questions</li>
-                            <li>Analyze information and identify useful trends</li>
-                            <li>Help your team work faster and more efficiently</li>
-                            <li>Connect AI to the tools your business already uses</li>
-                        </ul>
+            <p>
+                We set up processes that work automatically in the background, helping your team
+                spend less time on repetitive tasks and more time serving customers and growing
+                the business.
+            </p>
 
-                        <hr>
+            <ul>
+                <li>Automated emails, notifications, and follow-ups</li>
+                <li>Form processing and data validation</li>
+                <li>Automated data entry and record updates</li>
+                <li>Document and file processing</li>
+                <li>Scheduled business tasks and recurring workflows</li>
+                <li>Custom automation built around your business</li>
+            </ul>
 
-                        <h2>Data &amp; Analytics</h2>
+        </div>
 
-                        <p>
-                            <strong>Turn your business data into useful information.</strong> Your business is already
-                            generating valuable information every day. We help turn that information into something
-                            you can actually use to understand your business, spot opportunities, and make better decisions.
-                        </p>
+        <hr>
 
-                        <p>
-                            We can help collect, clean, organize, and analyze your information so you can understand
-                            what's working, identify trends, uncover opportunities, and make more informed decisions.
-                        </p>
+        <div class="business-section">
 
-                        <ul>
-                            <li>Collect and organize business information</li>
-                            <li>Clean and improve the quality of your data</li>
-                            <li>Custom reports and business metrics</li>
-                            <li>Trend and performance analysis</li>
-                            <li>Automatically collect and organize business information</li>
-                            <li>Connect information from multiple sources</li>
-                        </ul>
+            <h2>Artificial Intelligence</h2>
 
-                        <hr>
+            <p class="business-lead">
+                <strong>You don't need to be an AI expert to benefit from AI.</strong>
+                We help businesses find practical ways to use AI to save time, answer questions,
+                find information, understand customers, analyze data, and make better decisions.
+            </p>
 
-                        <h2>CRM Workflows</h2>
+            <p>
+                From AI assistants and chatbots to intelligent search and automated document
+                processing, we focus on solutions that provide a real business benefit—not
+                adding AI simply because it's the latest technology.
+            </p>
 
-                        <p>
-                            <strong>Your CRM should help your team sell more, not create more work.</strong>
-                            We can help automate the work that happens before, during, and after a customer interaction.
-                        </p>
+            <ul>
+                <li>AI assistants and business chatbots</li>
+                <li>Quickly find answers in your business information</li>
+                <li>Automate routine customer and employee questions</li>
+                <li>Analyze information and identify useful trends</li>
+                <li>Help your team work faster and more efficiently</li>
+                <li>Connect AI to the tools your business already uses</li>
+            </ul>
 
-                        <p>
-                            We can automate follow-ups, organize customer information, notify your team, and keep
-                            leads moving so fewer opportunities fall through the cracks.
-                        </p>
+        </div>
 
-                        <ul>
-                            <li>Capture and organize new leads</li>
-                            <li>Automated customer follow-ups</li>
-                            <li>Sales and customer notifications</li>
-                            <li>Keep customer information up to date</li>
-                            <li>Automated tasks and reminders</li>
-                            <li>Connect your CRM with other business tools</li>
-                        </ul>
+        <hr>
 
-                        <hr>
+        <div class="business-section">
 
-                        <h2>Custom Business Solutions</h2>
+            <h2>Data &amp; Analytics</h2>
 
-                        <p>
-                            <strong>Have a problem that doesn't fit into one category?</strong> That's where custom
-                            solutions come in.
-                        </p>
+            <p class="business-lead">
+                <strong>Know what's happening in your business.</strong>
+                Your business is already generating valuable information every day. We help
+                turn that information into something you can actually use to understand what's
+                working, spot opportunities, and make better decisions.
+            </p>
 
-                        <p>
-                            We can combine the tools and technology your business already uses to create a solution
-                            around a specific problem. You don't have to replace everything you're already using.
-                            Sometimes the best solution is simply making your existing tools work better together.
-                        </p>
+            <p>
+                We can help collect, organize, and analyze your information so you can identify
+                trends, understand performance, uncover opportunities, and get a clearer picture
+                of your business.
+            </p>
 
-                        <p>
-                            Tell us what takes too much time, what your team has to do over and over, or where things
-                            tend to fall through the cracks. We'll help you find a simpler way to get it done.
-                        </p>
+            <ul>
+                <li>Automatically collect and organize business information</li>
+                <li>Clean and improve the quality of your data</li>
+                <li>Custom reports and business metrics</li>
+                <li>Trend and performance analysis</li>
+                <li>Combine information from multiple sources</li>
+            </ul>
 
-                        <br>
+        </div>
 
-                        <div class="content">
-                            <header class="major">
-                                <h2>Let's Make Your Business Work Smarter</h2>
-                            </header>
+        <hr>
 
-                            <p>
-                                Not sure where to start? That's okay. Tell us what's slowing your business down,
-                                and we'll help you identify opportunities to save time, simplify your processes,
-                                and make better use of your technology.
-                            </p>
+        <div class="business-section">
 
-                            <p>
-                                <strong>Save time. Reduce repetitive work. Connect your systems. Make better use of your data.</strong>
-                            </p>
+            <h2>CRM Workflows</h2>
 
-                            <ul class="actions">
-                                <li><a href="#contact" class="button next">Free Consultation</a></li>
-                            </ul>
-                        </div>
+            <p class="business-lead">
+                <strong>Follow up faster. Stay organized. Close more business.</strong>
+                Your CRM should help your team sell more, not create more work. We can automate
+                the work that happens before, during, and after a customer interaction.
+            </p>
+
+            <p>
+                We can automate follow-ups, organize customer information, notify your team,
+                and keep leads moving so fewer opportunities fall through the cracks.
+            </p>
+
+            <ul>
+                <li>Capture and organize new leads</li>
+                <li>Automated customer follow-ups</li>
+                <li>Sales and customer notifications</li>
+                <li>Keep customer information up to date</li>
+                <li>Automated tasks and reminders</li>
+                <li>Connect your CRM with other business tools</li>
+            </ul>
+
+        </div>
+
+        <div class="business-highlight">
+
+            <h2>Custom Business Solutions</h2>
+
+            <h4>Have a problem you don't know how to solve?</h4>
+
+            <p>
+                We can combine the tools and technology your business already uses to create
+                a solution around a specific problem. You don't have to replace everything
+                you're already using. Sometimes the best solution is simply making your
+                existing tools work better together.
+            </p>
+
+            <p>
+                Tell us what's taking too much time, what your team has to do over and over,
+                or where things tend to fall through the cracks. We'll help you find a
+                simpler way to get it done.
+            </p>
+
+        </div>
+
+        <div class="business-cta">
+
+            <header class="major">
+                <h2>Make Your Business Work Smarter</h2>
+            </header>
+
+            <p>
+                <strong>Not sure what's possible? That's okay.</strong>
+                Tell us what's slowing your business down, and we'll help you identify
+                opportunities to save time, simplify your processes, and make better use
+                of your technology.
+            </p>
+
+            <p class="business-tagline">
+                <strong>Save time. Reduce repetitive work. Connect your systems.
+                Make better use of your data.</strong>
+            </p>
+
+            <ul class="actions">
+                <li>
+                    <a href="#contact" class="button primary next">Free Consultation</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+                    <!-- Main -->
+                    <div id="main">
+
+                        <!-- Two -->
+                        <section id="two">
+                            <div class="inner">
+
+                                <header class="major">
+                                    <h2>Why Work With Us?</h2>
+                                </header>
+
+                                <ul>
+                                    <li>
+                                        <strong>Built Around Your Business:</strong>
+                                        We don't believe in forcing every business into the same solution.
+                                        We focus on your processes, your tools, and your goals.
+                                    </li>
+
+                                    <li>
+                                        <strong>Save Time &amp; Reduce Busywork:</strong>
+                                        We look for opportunities to eliminate repetitive work and give your team
+                                        more time to focus on customers and higher-value tasks.
+                                    </li>
+
+                                    <li>
+                                        <strong>Make Your Existing Tools Work Together:</strong>
+                                        You may not need to replace your existing software. We can often connect
+                                        the systems you're already using and make them work better together.
+                                    </li>
+
+                                    <li>
+                                        <strong>AI With a Purpose:</strong>
+                                        We focus on useful AI applications that solve real business problems
+                                        rather than implementing technology just for the sake of it.
+                                    </li>
+
+                                    <li>
+                                        <strong>Grow at Your Own Pace:</strong>
+                                        Start with one process or problem and expand as your business grows.
+                                        Solutions can evolve as your needs change.
+                                    </li>
+
+                                    <li>
+                                        <strong>A Real Person Who Understands Your Business:</strong>
+                                        We work directly with you to understand your business and find technology
+                                        solutions that actually make sense for your operation.
+                                    </li>
+                                </ul>
+
+                                <ul class="actions">
+                                    <li><a href="#contact" class="button next">Free Consultation</a></li>
+                                </ul>
+
+                                <br>
+
+                                <header class="major">
+                                    <h3>Have a Business Challenge?</h3>
+                                </header>
+
+                                <p>
+                                    Have something in your business that takes too much time or creates unnecessary work?
+                                    Tell us about it. We'll help you explore whether technology can make it simpler.
+                                </p>
+
+                                <ul class="actions">
+                                    <li><a href="#contact" class="button next">Let's Talk</a></li>
+                                </ul>
+
+                            </div>
+                        </section>
 
                     </div>
-                </section>
-
-                <!-- Main -->
-                <div id="main">
-
-                    <!-- Two -->
-                    <section id="two">
-                        <div class="inner">
-
-                            <header class="major">
-                                <h2>Why Work With Us?</h2>
-                            </header>
-
-                            <ul>
-                                <li>
-                                    <strong>Built Around Your Business:</strong>
-                                    We don't believe in forcing every business into the same solution.
-                                    We focus on your processes, your tools, and your goals.
-                                </li>
-
-                                <li>
-                                    <strong>Save Time &amp; Reduce Busywork:</strong>
-                                    We look for opportunities to eliminate repetitive work and give your team
-                                    more time to focus on customers and higher-value tasks.
-                                </li>
-
-                                <li>
-                                    <strong>Make Your Existing Tools Work Together:</strong>
-                                    You may not need to replace your existing software. We can often connect
-                                    the systems you're already using and make them work better together.
-                                </li>
-
-                                <li>
-                                    <strong>AI With a Purpose:</strong>
-                                    We focus on useful AI applications that solve real business problems
-                                    rather than implementing technology just for the sake of it.
-                                </li>
-
-                                <li>
-                                    <strong>Grow at Your Own Pace:</strong>
-                                    Start with one process or problem and expand as your business grows.
-                                    Solutions can evolve as your needs change.
-                                </li>
-
-                                <li>
-                                    <strong>A Real Person Who Understands Your Business:</strong>
-                                    We work directly with you to understand your business and find technology
-                                    solutions that actually make sense for your operation.
-                                </li>
-                            </ul>
-
-                            <ul class="actions">
-                                <li><a href="#contact" class="button next">Free Consultation</a></li>
-                            </ul>
-
-                            <br>
-
-                            <header class="major">
-                                <h3>Have a Business Challenge?</h3>
-                            </header>
-
-                            <p>
-                                Have something in your business that takes too much time or creates unnecessary work?
-                                Tell us about it. We'll help you explore whether technology can make it simpler.
-                            </p>
-
-                            <ul class="actions">
-                                <li><a href="#contact" class="button next">Let's Talk</a></li>
-                            </ul>
-
-                        </div>
-                    </section>
-
-                </div>
 
 				<!-- Contact -->
 					<section id="contact">
