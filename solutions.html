@@ -1,0 +1,706 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Prevent FOUC (flash of unstyled content) -->
+		<style>
+		html {
+			visibility: hidden;
+			opacity: 0;
+		}
+		</style>
+        <style>
+        /* ================================
+        Business Solutions Styling
+        ================================ */
+
+        .business-intro {
+            margin: 2rem 0 3rem;
+        }
+
+        .business-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0 3.5rem;
+        }
+
+        .business-card {
+            position: relative;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.035);
+            border-left: 4px solid #6c6333;
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease,
+                        background 0.25s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.065);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .business-card h4 {
+            margin-bottom: 0.6rem;
+        }
+
+        .business-card p {
+            margin-bottom: 0;
+        }
+
+        .business-section {
+            margin: 3rem 0;
+        }
+
+        .business-section > h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .business-lead {
+            font-size: 1.08rem;
+        }
+
+        .business-highlight {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-highlight h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .business-highlight h4 {
+            margin-bottom: 1rem;
+        }
+
+        .business-cta {
+            margin: 4rem 0 2rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-cta p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .business-cta .actions {
+            justify-content: center;
+        }
+
+        .business-tagline {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media screen and (max-width: 736px) {
+
+            .business-services {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .business-card {
+                padding: 1.25rem;
+            }
+
+            .business-highlight {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .business-cta {
+                padding: 2rem 1.25rem;
+            }
+
+        }
+    </style>
+
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.documentElement.style.visibility = "visible";
+			document.documentElement.style.opacity = "1";
+		});
+		</script>
+
+		<title>website-made-easy.com</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="./images/emblem/Vintage Logo With Blue Kitten, Crown, Circular Text.png.jpg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+									<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>website-made-easy.com</strong></a>
+						<img src="./images/emblem/Vintage Logo With Blue Kitten, Crown, Circular Text.png.jpg">
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="packages.html">Website Packages</a></li>
+							<li><a href="solutions.html">Business Solutions</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="started.html" class="button primary fit">Get Started</a></li>
+							<li><a href="login.html" class="button fit">Log In</a></li>
+							<li><a href="https://buy.stripe.com/7sIg12a9edbZ9B63cg" class="button fit">Make Payment</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+				<div id="main">
+					<!-- One -->
+<section id="one" class="style9">
+    <div class="inner">
+
+        <h1>Business Solutions</h1>
+
+        <h3>How can we help your business?</h3>
+
+        <div class="business-services">
+
+            <div class="business-card">
+                <h4>Integration</h4>
+                <p>
+                    <strong>Make your tools work together.</strong>
+                    Connect the software you already use so information moves automatically—
+                    saving time, reducing errors, and keeping everything up to date.
+                </p>
+            </div>
+
+            <div class="business-card">
+                <h4>Automation</h4>
+                <p>
+                    <strong>Let repetitive work take care of itself.</strong>
+                    Send invoices, follow up with customers, process forms, update records,
+                    and handle everyday tasks automatically.
+                </p>
+            </div>
+
+            <div class="business-card">
+                <h4>AI</h4>
+                <p>
+                    <strong>Put AI to work for your business.</strong>
+                    Find potential customers, improve pricing, answer common questions,
+                    analyze information, spot trends, and make better decisions.
+                </p>
+            </div>
+
+            <div class="business-card">
+                <h4>Data &amp; Analytics</h4>
+                <p>
+                    <strong>Know what's happening in your business.</strong>
+                    Turn your business information into useful insights so you can understand
+                    what's working and spot opportunities.
+                </p>
+            </div>
+
+            <div class="business-card">
+                <h4>CRM Workflows</h4>
+                <p>
+                    <strong>Follow up faster. Stay organized. Close more business.</strong>
+                    Automate follow-ups, keep customer information organized, and make sure
+                    opportunities don't slip through the cracks.
+                </p>
+            </div>
+
+        </div>
+
+        <header class="major">
+            <h2>Tech To Make Your Business Easier</h2>
+        </header>
+
+        <div class="business-intro">
+
+            <p class="business-lead">
+                Every business has tasks that take too much time, information that's difficult
+                to manage, and processes that could work better. We create practical technology
+                solutions that save time, simplify your day-to-day operations, and help you get
+                more from the tools you already use.
+            </p>
+
+            <p>
+                Whether you need to eliminate manual data entry, connect two tools that don't
+                work well together, automate customer communication, or use AI to make better
+                decisions, we can design a solution around the way your business actually operates.
+            </p>
+
+        </div>
+
+        <hr>
+
+        <div class="business-section">
+
+            <h2>Integration</h2>
+
+            <p class="business-lead">
+                <strong>Tired of entering the same information in more than one place?</strong>
+                We connect the tools you already use so information moves where it needs to go
+                automatically. Websites, CRMs, databases, forms, scheduling systems, payment
+                platforms, email services, and other business applications can work together
+                instead of making you do the work twice.
+            </p>
+
+            <p>
+                Whether you need to connect two simple tools or coordinate information across
+                several systems, we can help your technology work together and reduce the manual
+                work required to keep everything up to date.
+            </p>
+
+            <ul>
+                <li>Connect the tools and software you already use</li>
+                <li>Keep customer and business information in sync</li>
+                <li>Connect websites, forms, scheduling, payments, and other systems</li>
+                <li>Reduce duplicate data entry and manual work</li>
+                <li>Build custom solutions around the way your business operates</li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <div class="business-section">
+
+            <h2>Automation</h2>
+
+            <p class="business-lead">
+                <strong>Stop spending valuable time on work that doesn't need to be done by hand.</strong>
+                If your team is repeatedly entering data, sending emails, processing forms,
+                creating reports, updating records, or moving information between systems,
+                there may be an opportunity to automate it.
+            </p>
+
+            <p>
+                We set up processes that work automatically in the background, helping your team
+                spend less time on repetitive tasks and more time serving customers and growing
+                the business.
+            </p>
+
+            <ul>
+                <li>Automated emails, notifications, and follow-ups</li>
+                <li>Form processing and data validation</li>
+                <li>Automated data entry and record updates</li>
+                <li>Document and file processing</li>
+                <li>Scheduled business tasks and recurring workflows</li>
+                <li>Custom automation built around your business</li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <div class="business-section">
+
+            <h2>Artificial Intelligence</h2>
+
+            <p class="business-lead">
+                <strong>You don't need to be an AI expert to benefit from AI.</strong>
+                We help businesses find practical ways to use AI to save time, answer questions,
+                find information, understand customers, analyze data, and make better decisions.
+            </p>
+
+            <p>
+                From AI assistants and chatbots to intelligent search and automated document
+                processing, we focus on solutions that provide a real business benefit—not
+                adding AI simply because it's the latest technology.
+            </p>
+
+            <ul>
+                <li>AI assistants and business chatbots</li>
+                <li>Quickly find answers in your business information</li>
+                <li>Automate routine customer and employee questions</li>
+                <li>Analyze information and identify useful trends</li>
+                <li>Help your team work faster and more efficiently</li>
+                <li>Connect AI to the tools your business already uses</li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <div class="business-section">
+
+            <h2>Data &amp; Analytics</h2>
+
+            <p class="business-lead">
+                <strong>Know what's happening in your business.</strong>
+                Your business is already generating valuable information every day. We help
+                turn that information into something you can actually use to understand what's
+                working, spot opportunities, and make better decisions.
+            </p>
+
+            <p>
+                We can help collect, organize, and analyze your information so you can identify
+                trends, understand performance, uncover opportunities, and get a clearer picture
+                of your business.
+            </p>
+
+            <ul>
+                <li>Automatically collect and organize business information</li>
+                <li>Clean and improve the quality of your data</li>
+                <li>Custom reports and business metrics</li>
+                <li>Trend and performance analysis</li>
+                <li>Combine information from multiple sources</li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <div class="business-section">
+
+            <h2>CRM Workflows</h2>
+
+            <p class="business-lead">
+                <strong>Follow up faster. Stay organized. Close more business.</strong>
+                Your CRM should help your team sell more, not create more work. We can automate
+                the work that happens before, during, and after a customer interaction.
+            </p>
+
+            <p>
+                We can automate follow-ups, organize customer information, notify your team,
+                and keep leads moving so fewer opportunities fall through the cracks.
+            </p>
+
+            <ul>
+                <li>Capture and organize new leads</li>
+                <li>Automated customer follow-ups</li>
+                <li>Sales and customer notifications</li>
+                <li>Keep customer information up to date</li>
+                <li>Automated tasks and reminders</li>
+                <li>Connect your CRM with other business tools</li>
+            </ul>
+
+        </div>
+
+        <div class="business-highlight">
+
+            <h2>Custom Business Solutions</h2>
+
+            <h4>Have a problem you don't know how to solve?</h4>
+
+            <p>
+                We can combine the tools and technology your business already uses to create
+                a solution around a specific problem. You don't have to replace everything
+                you're already using. Sometimes the best solution is simply making your
+                existing tools work better together.
+            </p>
+
+            <p>
+                Tell us what's taking too much time, what your team has to do over and over,
+                or where things tend to fall through the cracks. We'll help you find a
+                simpler way to get it done.
+            </p>
+
+        </div>
+
+        <div class="business-cta">
+
+            <header class="major">
+                <h2>Make Your Business Work Smarter</h2>
+            </header>
+
+            <p>
+                <strong>Not sure what's possible? That's okay.</strong>
+                Tell us what's slowing your business down, and we'll help you identify
+                opportunities to save time, simplify your processes, and make better use
+                of your technology.
+            </p>
+
+            <p class="business-tagline">
+                <strong>Save time. Reduce repetitive work. Connect your systems.
+                Make better use of your data.</strong>
+            </p>
+
+            <ul class="actions">
+                <li>
+                    <a href="#contact" class="button primary next">Free Consultation</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+                    <!-- Main -->
+                    <div id="main">
+
+                        <!-- Two -->
+                        <section id="two">
+                            <div class="inner">
+
+                                <header class="major">
+                                    <h2>Why Work With Us?</h2>
+                                </header>
+
+                                <ul>
+                                    <li>
+                                        <strong>Built Around Your Business:</strong>
+                                        We don't believe in forcing every business into the same solution.
+                                        We focus on your processes, your tools, and your goals.
+                                    </li>
+
+                                    <li>
+                                        <strong>Save Time &amp; Reduce Busywork:</strong>
+                                        We look for opportunities to eliminate repetitive work and give your team
+                                        more time to focus on customers and higher-value tasks.
+                                    </li>
+
+                                    <li>
+                                        <strong>Make Your Existing Tools Work Together:</strong>
+                                        You may not need to replace your existing software. We can often connect
+                                        the systems you're already using and make them work better together.
+                                    </li>
+
+                                    <li>
+                                        <strong>AI With a Purpose:</strong>
+                                        We focus on useful AI applications that solve real business problems
+                                        rather than implementing technology just for the sake of it.
+                                    </li>
+
+                                    <li>
+                                        <strong>Grow at Your Own Pace:</strong>
+                                        Start with one process or problem and expand as your business grows.
+                                        Solutions can evolve as your needs change.
+                                    </li>
+
+                                    <li>
+                                        <strong>A Real Person Who Understands Your Business:</strong>
+                                        We work directly with you to understand your business and find technology
+                                        solutions that actually make sense for your operation.
+                                    </li>
+                                </ul>
+
+                                <ul class="actions">
+                                    <li><a href="#contact" class="button next">Free Consultation</a></li>
+                                </ul>
+
+                                <br>
+
+                                <header class="major">
+                                    <h3>Have a Business Challenge?</h3>
+                                </header>
+
+                                <p>
+                                    Have something in your business that takes too much time or creates unnecessary work?
+                                    Tell us about it. We'll help you explore whether technology can make it simpler.
+                                </p>
+
+                                <ul class="actions">
+                                    <li><a href="#contact" class="button next">Let's Talk</a></li>
+                                </ul>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#" name="contact" netlify>
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<!-- <div class="field half">
+											<label for="attachment">Add Attachment (If Needed):</label>
+										<input type="file" id="attachment" name="attachment">
+										</div>									 -->
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<a href="mailto:contact.website.made.easy@gmail.com">
+										<span class="icon solid alt fa-envelope"></span>
+									</a>
+										
+										<a href="mailto:contact.website.made.easy@gmail.com"><h3>Email us</h3></a>
+									</div>
+								</section>
+								<!-- <section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(800) 752-1852 x12387</span>
+									</div>
+								</section> -->
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>QR Code</h3>
+										<p>website-made-easy.com</p>
+										<!-- <h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span> -->
+										<span class="image">
+											<img src="images/website_made_easy_qr.png" alt="image of our QR code" style="max-width: 100%; height: auto;" />
+										</span>							
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<!-- <span class="image">
+								<img src="images/website_made_easy_qr.png" alt="" />
+							</span> -->
+							<!-- <ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul> -->
+							<ul class="copyright">
+								<li>&copy; Website Made Easy</li><img src="./images/emblem/Vintage Logo With Blue Kitten, Crown, Circular Text.png.jpg" style="max-height: 20px; width: auto;"><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								
+
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="v0TmIXc52wMxhyk3WWdIg";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+			</script>
+			<!-- <script>
+				window.embeddedChatbotConfig = {
+				chatbotId: "19GOpWTjaSIgkGwrmHat1",
+				domain: "www.chatbase.co"
+				}
+				</script> -->
+				<!-- <script
+				src="https://www.chatbase.co/embed.min.js"
+				chatbotId="19GOpWTjaSIgkGwrmHat1"
+				domain="www.chatbase.co"
+				defer>
+			</script> -->
+			<script>
+				(function(){
+				const slidesWrap = document.getElementById('slides');
+				const slides = Array.from(slidesWrap.children);
+				const prevBtn = document.getElementById('prev');
+				const nextBtn = document.getElementById('next');
+				const indicatorsWrap = document.getElementById('indicators');
+				let index = 0;
+				const count = slides.length;
+				let isAnimating = false;
+
+				// build indicators
+				slides.forEach((s,i)=>{
+					const btn = document.createElement('button');
+					btn.className = 'indicator';
+					btn.type = 'button';
+					btn.setAttribute('aria-label', `Go to slide ${i+1}`);
+					btn.addEventListener('click', ()=> goTo(i));
+					indicatorsWrap.appendChild(btn);
+				});
+
+				const indicators = Array.from(indicatorsWrap.children);
+
+				function update(){
+					slidesWrap.style.transform = `translateX(${ -index * 100 }%)`;
+					indicators.forEach((it,i)=> it.setAttribute('aria-current', i===index));
+				}
+
+				function prev(){ if(isAnimating) return; index = (index-1+count)%count; update(); }
+				function next(){ if(isAnimating) return; index = (index+1)%count; update(); }
+				function goTo(i){ if(isAnimating) return; index = (i+count)%count; update(); }
+
+				prevBtn.addEventListener('click', prev);
+				nextBtn.addEventListener('click', next);
+
+				// keyboard navigation
+				window.addEventListener('keydown', (e)=>{
+					if(e.key === 'ArrowLeft') prev();
+					if(e.key === 'ArrowRight') next();
+				});
+
+				// touch support (simple swipe)
+				let startX = 0, dx = 0;
+				slidesWrap.addEventListener('touchstart', e=>{ startX = e.touches[0].clientX; dx=0; });
+				slidesWrap.addEventListener('touchmove', e=>{ dx = e.touches[0].clientX - startX; });
+				slidesWrap.addEventListener('touchend', ()=>{ if(Math.abs(dx) > 40){ if(dx < 0) next(); else prev(); } startX=0; dx=0; });
+
+				// optional: autoplay (comment out if you don't want it)
+				let autoplayInterval = 5000; // ms
+				let autoplayId = setInterval(next, autoplayInterval);
+				// pause on hover / focus
+				document.querySelector('.carousel').addEventListener('mouseenter', ()=> clearInterval(autoplayId));
+				document.querySelector('.carousel').addEventListener('mouseleave', ()=> autoplayId = setInterval(next, autoplayInterval));
+
+				// initial state
+				update();
+
+				// simple lazy-loading: ensure images have loading="lazy"
+				slides.forEach(fig=>{
+					const img = fig.querySelector('img');
+					if(img) img.loading = 'lazy';
+				});
+
+				})();
+			</script>
+
+	</body>
+</html>
